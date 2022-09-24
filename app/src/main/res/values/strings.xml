@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Offline TLP Monitoring</string>
+    <string name="img">Images</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login_pref">LoginPreference</string>
+    <string name="login_name">login_name</string>
+    <string name="login_pass">login_pass</string>
+    <string name="first_time">isItFirstTime</string>
+    <string name="intent_home">intent_home</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="frag_user_home">frag_user_home</string>
+    <string name="frag_user_record">frag_user_record</string>
+    <string name="tlp">TLP</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="type_your_other_remarks">Type your other remarks</string>
+
+    <string name="sync_before_title">Before Syncing data please read the message:</string>
+    <string name="sync_before_message">• Don\'t turn off the device.\n• Don\'t turn off your connection.\n• It may take some time to send your data to server based on your network speed.\n\n\tYes I Understood and wanted to Sync my Inspection Reports Online.</string>
+
+
+    <string name="cp_max">Carrrier/Pro MAX</string>
+    <string name="cp_min">Carrrier/Pro MIN</string>
+    <string name="casing_min">Casing/Pro MIN</string>
+    <string name="casing_max">Casing/Pro MAX</string>
+    <string name="ac_psp">AC PSP</string>
+    <string name="foreign_p_min">Foreign Pipeline MIN</string>
+    <string name="foreign_p_max">Foreign Pipeline MAX</string>
+    <string name="user_home">User Home</string>
+    <string name="frag_sync">frag_sync</string>
+    <string name="sync_data_of">DataOf</string>
+    <string name="pending">pending</string>
+    <string name="deafult_main_frag">deafult_main_frag</string>
+
+    <string name="copyrigths"><font fgcolor="#d8f43b">Website designed and developed by <b><u>Intech</u></b>!</font></string>
+
+
+    <string name="marquee">
+        International Certification Services has been providing their value added
+        certification and inspection services to the Government, Public and Private
+        Sector Organizations involved in land, offshore, marine activities. It is a
+        professional organization backed by devoted, highly qualified and experienced personnel.
+        We provide a wide spectrum of customer oriented certification and inspection services in an
+        efficient and cost effective manner. National Accreditation Board for Certification Bodies
+        (NABCB) for Quality Management System for specific sector &amp; Environmental Management System
+        for chemicals, chemical products &amp; fibres, rubber &amp; plastic products. International Certification
+        Services has a number of Regional Offices, Stations and sites in India as well as overseas with highly
+        qualified and competent manpower located close to our valued customers. International Certification Services has
+        well established Quality Assurance System and has been accredited by JAS-ANZ, the Joint Accreditation System of
+        Australia and New Zealand, Australia for Quality and Environmental Management Systems.
+    </string>
+    <string name="developed_by">Developed By Intech</string>
+    <string name="sync">Sync</string>
+    <string name="logout">Logout</string>
+    <string name="select">Select</string>
+    <string name="driver_name">Driver Name</string>
+    <string name="vehical_photo">Vehicle Photo</string>
+    <string name="start_km">Start Km</string>
+    <string name="end_km">End Km</string>
+    <string name="driver_mob">Mobile No</string>
+    <string name="vehicle_no">Vehicle No</string>
+    <string name="enter_end_for_tsno">Enter End Km of Ts No:</string>
+
+
+    <string-array name="manual_remark">
+        <item>Select</item>
+        <item>Door Missing</item>
+        <item>TLP Missing</item>
+        <item>Name Plate Missing</item>
+        <item>Top Lid Missing</item>
+        <item>Backlite Missing</item>
+        <item>Kirk Cell Missing</item>
+        <item>TLP Logs &amp; Nut-Bolts  Missing</item>
+        <item>Pointing Required</item>
+        <item>Lock Broken</item>
+        <item>Hinge Broken</item>
+        <item>TLP Bent / Not in plum / Pipe Bend</item>
+        <item>Animal/Weed/Pest TLP inaccessible</item>
+        <item>Electrolyte needs refilling</item>
+        <item>TLP Cable Cut</item>
+        <item>TLP Cut</item>
+        <item>TLP Backfilled/Debreez</item>
+        <item>Farmer Problem</item>
+        <item>Water Logged</item>
+        <item>TLP Inaccessible</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>

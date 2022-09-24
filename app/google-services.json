@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "704328764525",
+    "firebase_url": "https://offline-tlp-monitoring.firebaseio.com",
+    "project_id": "offline-tlp-monitoring",
+    "storage_bucket": "offline-tlp-monitoring.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704328764525:android:bebfb05aeb8bdbe5",
+        "android_client_info": {
+          "package_name": "org.icspl.ecdtlp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704328764525-9gk74rg6s54gsg4nfj4lh0e0psjkeuoa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.icspl.ecdtlp",
+            "certificate_hash": "e5237a65a60f3c0ecc66b9b21662136d6ba0c16d"
+          }
+        },
+        {
+          "client_id": "704328764525-1m323lovcpeikrmdi7bvcetk84fd0072.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.icspl.ecdtlp",
+            "certificate_hash": "ea38629c3b30c1a7dd3e075f3472dee225426f80"
+          }
+        },
+        {
+          "client_id": "704328764525-65lbvp8cco4it2vsomqdk53rm11do0ii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjsF5Uy5oiIfk4mxmb_kbQbQ1mCbGCvx0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "704328764525-65lbvp8cco4it2vsomqdk53rm11do0ii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

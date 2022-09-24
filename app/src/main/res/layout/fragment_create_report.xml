@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Constraint1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".fragments.CreateReportFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutHide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btnONOFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:text="ON/OFF"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnDiscoverable_on_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="btnEnableDisable_Discoverable"
+            android:text="Enable Discoverable"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnFindUnpairedDevices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_red"
+            android:text="Discover"
+            android:textColor="#FFFFFF"
+            android:visibility="visible" />
+
+        <ListView
+            android:id="@+id/lvNewDevices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btnStartConnection"
+            android:layout_marginTop="23dp" />
+
+        <Button
+            android:id="@+id/btnStartConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnFindUnpairedDevices"
+            android:layout_marginTop="10dp"
+            android:text="Start Connection"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lvNewDevices"
+                    android:layout_alignParentLeft="true"
+                    android:hint="Enter Text Here"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btnSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lvNewDevices"
+                    android:layout_toRightOf="@+id/editText"
+                    android:text="SEND"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/msgReceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Message Here"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewData"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- TS NO -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="4dp"
+                android:padding="5dp"
+                android:background="@drawable/selector_xml_btn_yellow">
+                <Button
+                    android:id="@+id/newBTConnectBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_red"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="14sp"
+                    android:text="Connect Bluetooth" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/tl_show_1"
+                android:layout_margin="4dp"
+                android:padding="5dp"
+                android:background="@drawable/selector_xml_btn_yellow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TS No." />
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/sp_show_ts_no"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- TYPE -->
+            <LinearLayout
+                android:id="@+id/tl_show_2"
+                android:layout_margin="4dp"
+                android:padding="5dp"
+                android:background="@drawable/selector_xml_btn_yellow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Type" />
+                <TextView
+                    android:id="@+id/tv_show_type"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!-- TS CHAINAGE -->
+            <LinearLayout
+                android:id="@+id/tl_show_3"
+                android:layout_margin="4dp"
+                android:padding="5dp"
+                android:background="@drawable/selector_xml_btn_yellow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TS Ch/(KM)" />
+                <TextView
+                    android:id="@+id/tv_show_ts_ch"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!-- TS LOCATION -->
+            <LinearLayout
+                android:id="@+id/tl_show_4"
+                android:layout_margin="4dp"
+                android:padding="5dp"
+                android:background="@drawable/selector_xml_btn_yellow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TS Location" />
+                <TextView
+                    android:id="@+id/tv_show_location"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="4"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/selector_xml_btn_yellow"
+                android:padding="5dp">
+                <Button
+                    android:id="@+id/tlpbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_red"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="14sp"
+                    android:text="TLP Monitoring" />
+                <Button
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/dataloggingbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_red"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:text="Data Logging" />
+            </LinearLayout>
+            <!-- closed until buttons -->
+
+            <LinearLayout
+                android:id="@+id/tlpMonitoringPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--start reading part from here -->
+
+                <LinearLayout
+                    android:id="@+id/tl_show_5"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/tv_show_d_cp_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carrier Pro Min/On	" />
+
+                    <EditText
+                        android:id="@+id/et_show_carrier_pro_min"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:hint="Carrier Pro Min/On	"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:id="@+id/carrierProOnBT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_bluetooth_24"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_6"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/tv_show_d_cp_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carrier Pro Max/Off	" />
+
+                    <EditText
+                        android:id="@+id/et_show_carrier_pro_max"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:hint="Carrier Pro Max/Off	"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:id="@+id/carrierProOffBT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_bluetooth_24"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_7"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/tv_show_d_cpu_min"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Casing/Un-Pro Min/On" />
+
+                    <EditText
+                        android:id="@+id/et_show_cpu_min"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:hint="Casing/Un-Pro Min/On"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:id="@+id/casingProOnBT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_bluetooth_24"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_8"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_show_d_cpu_max"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Casing/Un-Pro Max/Off" />
+
+                    <EditText
+                        android:id="@+id/et_show_cpu_max"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:hint="Casing/Un-Pro Max/Off"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:id="@+id/casingProOffBT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_bluetooth_24"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_9"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_show_d_velve"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Valve" />
+
+                    <EditText
+                        android:id="@+id/et_show_value"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Valve"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:visibility="invisible"
+                        android:id="@+id/valveBT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_bluetooth_24"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_10"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_show_d_pot_1"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Potential 1" />
+
+                    <EditText
+                        android:id="@+id/et_show_p1"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Potential 1"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:textSize="14sp" />
+
+
+                    <ImageButton
+                        android:visibility="invisible"
+                        android:id="@+id/potential1BT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_bluetooth_24"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_11"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_show_d_pot_2"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Potential 2" />
+
+                    <EditText
+                        android:id="@+id/et_show_p2"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Potential 2"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:textSize="14sp" />
+
+
+                    <ImageButton
+                        android:visibility="invisible"
+                        android:id="@+id/potential2BT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_bluetooth_24"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_12"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_show_d_ac_psp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="AC PSP" />
+
+                    <EditText
+                        android:id="@+id/et_show_ac_psp"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:hint="AC PSP"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:id="@+id/ac_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_bluetooth_24"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_13"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_show_d_zinc_value"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="ZINC Value" />
+
+                    <EditText
+                        android:id="@+id/et_show_z_value"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="ZINC Value"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:visibility="invisible"
+                        android:id="@+id/zincValueBT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_bluetooth_24"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_14"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Date" />
+
+                    <TextView
+                        android:id="@+id/tv_show_date"
+                        android:layout_width="198dp"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_15"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Time: " />
+
+                    <TextView
+                        android:id="@+id/tv_show_time"
+                        android:layout_width="198dp"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_16"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Co-ordinate: " />
+
+                    <TextView
+                        android:id="@+id/tv_show_Cordinates"
+                        android:layout_width="198dp"
+                        android:layout_height="wrap_content"
+                        android:text="Fetching co-ordinates..."
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_18"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Manual Remarks" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/sp_show_manual_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/manual_remark" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_19"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TLP Photo" />
+
+                    <Button
+                        android:id="@+id/btn_show_photo_1"
+                        style="@style/Base.Widget.AppCompat.Button.Colored"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_xml_btn_yellow"
+                        android:text="TLP" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_20"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Schematic Photo" />
+
+                    <Button
+                        android:id="@+id/btn_show_photo_2"
+                        style="@style/Base.Widget.AppCompat.Button.Colored"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_xml_btn_yellow"
+                        android:text="Photo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_21"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Selfie with TLP" />
+
+                    <Button
+                        android:id="@+id/btn_show_photo_3"
+                        style="@style/Base.Widget.AppCompat.Button.Colored"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_xml_btn_yellow"
+                        android:text="Selfie" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_23"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Vehicle Driver Details"
+                        android:textColor="@color/md_red_900"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_24"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:weightSum="2"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/et_vehical_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/vehicle_no"
+                        android:inputType="textAutoComplete"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btn_vehical_no"
+                        style="@style/Base.Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_xml_btn_yellow"
+                        android:text="@string/vehical_photo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_25"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:weightSum="2"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_driver_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/driver_name"
+                        android:inputType="textPersonName"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_driver_mobile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/driver_mob"
+                        android:inputType="number"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_26"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:weightSum="2"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_start_km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:hint="@string/start_km"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btn_start_km"
+                        style="@style/Base.Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_xml_btn_yellow"
+                        android:text="@string/start_km" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_27"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:weightSum="2"
+                    android:visibility="gone"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_end_km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:text="100"
+                        android:hint="@string/end_km"
+                        android:inputType="number"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btn_end_km"
+                        style="@style/Base.Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_xml_btn_yellow"
+                        android:text="@string/end_km" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_show_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:text="Submit"
+                    android:background="@drawable/btn_red"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="18sp" />
+
+                <!--end reading part from here -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dataLoggingpart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <!-- DATA LOGGING STARTS HERE -->
+
+                <LinearLayout
+                    android:id="@+id/tl_show_28"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Start Time" />
+
+                    <EditText
+                        android:id="@+id/time_view_edit"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:textSize="14sp"
+                        android:focusable="false"
+                        android:hint="Start Time" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_29"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="End Time" />
+
+                    <EditText
+                        android:id="@+id/time_view_end"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:textSize="14sp"
+                        android:focusable="false"
+                        android:hint="End Time" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_29_1"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="On Timer Duration" />
+
+                    <EditText
+                        android:id="@+id/onTimer"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:hint="Enter ON Duration" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_show_30"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Off Timer Duration" />
+
+                    <EditText
+                        android:id="@+id/offTimer"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:hint="Enter OFF Duration" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/clickHere"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/btn_red"
+                    android:textColor="@color/md_white_1000"
+                    android:text="Create Table" />
+
+                <Button
+                    android:id="@+id/dataLoggingBtn"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:background="@drawable/btn_red"
+                    android:textColor="@color/md_white_1000"
+                    android:text="Start Data Logging" />
+
+                <LinearLayout
+                    android:id="@+id/tl_show_33"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/selector_xml_btn_yellow"
+                    android:visibility="gone"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/timer"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="-3dp"
+                        android:hint="Timer :"
+                        android:text="00:00" />
+
+                    <TextView
+                        android:id="@+id/resend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="40dp"
+                        android:hint="Data :"
+                        android:text="Resend" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/testingRv"
+                        android:visibility="gone"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/clickStop"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_margin="4dp"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_red"
+                    android:textColor="@color/md_white_1000"
+                    android:text="Click To Stop" />
+
+                <!-- DATA LOGGING ENDS HERE -->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/about_play_store_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_alert_end_km_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            android:background="@color/md_brown_500"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/about_twitter_color"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_alert_end_km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter End Kilometers"
+                android:inputType="textPersonName|textMultiLine"
+                android:padding="8dp"
+                android:textSize="12sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/btn_elert_file_end_km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:background="@drawable/selector_xml_btn_yellow"
+                android:text="Photo"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_alert_save_km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_xml_btn_yellow"
+                android:text="Save"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

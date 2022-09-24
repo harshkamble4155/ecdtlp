@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="345dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardview_light_background"
+                app:cardElevation="4dp"
+                android:layout_margin="5dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/about_separator_color">
+
+                    <TableRow
+                        android:id="@+id/tl_show_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TS No." />
+
+                        <TextView
+                            android:id="@+id/tv_ts_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="-" />
+
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tr_Type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Type" />
+
+                        <TextView
+                            android:id="@+id/type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="Type" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tr_TS_Ch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TS Ch/(KM)" />
+
+                        <TextView
+                            android:id="@+id/tS_Ch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="TS Ch/(KM)" />
+
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tr_TS_Location"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TS Location" />
+
+                        <TextView
+                            android:id="@+id/ts_Location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="TS Location" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_Carrrier_Pro_MIN"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Carrrier/Pro MIN" />
+
+                        <TextView
+                            android:id="@+id/carrrier_Pro_MIN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="Carrrier/Pro MIN" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_Carrrier_Pro_MAX"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Carrrier/Pro MAX" />
+
+                        <TextView
+                            android:id="@+id/carrrier_Pro_MAX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="Carrrier/Pro MAX" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_Casing_Un-Pro_Min_On"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Casing/Un-Pro Min/On" />
+
+                        <TextView
+                            android:id="@+id/casing_Un-Pro_Min_On"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="Casing/Un-Pro Min/On" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_Casing_Un-Pro_Max_Off"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Casing/Un-Pro Max/Off" />
+
+                        <TextView
+                            android:id="@+id/casing_Un-Pro_Max_Off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="Casing/Un-Pro Max/Off" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_Valve"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Valve" />
+
+                        <TextView
+                            android:id="@+id/valve"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="Valve" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_Potential_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Potential 1" />
+
+                        <TextView
+                            android:id="@+id/potential_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="Potential 1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_Potential_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Potential 2" />
+
+                        <TextView
+                            android:id="@+id/potential_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="Potential 2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_AC_PSP"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="AC PSP" />
+
+                        <TextView
+                            android:id="@+id/ac_PSP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="AC PSP" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tr_ZINC_Value"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="ZINC Value" />
+
+                        <TextView
+                            android:id="@+id/zinc_Value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="ZINC Value" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_Date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Date" />
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="Date" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_Time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Time" />
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="Time" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_Manual_Remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Manual Remarks" />
+
+                        <TextView
+                            android:id="@+id/manual_Remarks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="Manual Remarks" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_Tlp_Photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Tlp Photo" />
+
+                        <Button
+                            android:id="@+id/btn_tlp_Photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/selector_xml_btn_yellow"
+                            android:text="Tlp Photo" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tr_Reading_Photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Reading Photo" />
+
+                        <Button
+                            android:id="@+id/btn_reading_Photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/selector_xml_btn_yellow"
+                            android:text="Reading Photo" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tr_Selfie"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Selfie" />
+
+                        <Button
+                            android:id="@+id/btn_selfie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/selector_xml_btn_yellow"
+                            android:text="Selfie" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tr_start_KM"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="StartKM" />
+
+                        <Button
+                            android:id="@+id/btn_startkm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/selector_xml_btn_yellow"
+                            android:text="Start KM" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tr_End_KM"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="End KM" />
+
+                        <Button
+                            android:id="@+id/btn_endkm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/selector_xml_btn_yellow"
+                            android:text="End KM" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_Vehicleno"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Vehicle No." />
+
+                        <Button
+                            android:id="@+id/btn_vehicle_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/selector_xml_btn_yellow"
+                            android:text="Vehicle_No" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

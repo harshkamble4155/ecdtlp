@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/tv_date_row"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:hint="Date" />
+
+        <TextView
+            android:id="@+id/tv_section_row"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:hint="Section" />
+
+        <TextView
+            android:id="@+id/tv_quater_row"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:hint="Quarters" />
+
+        <Button
+            android:id="@+id/btn_syncr_row"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_xml_btn_yellow"
+            android:contentDescription="@string/img"
+            android:text="Sync Now"
+            android:textSize="12sp"
+            android:tint="@color/colorAccent" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>
